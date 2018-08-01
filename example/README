@@ -1,0 +1,2 @@
+Usage:
+$ ./validate -v <domain>.pddl <problem>.pddl <plan_file>

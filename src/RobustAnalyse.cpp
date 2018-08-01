@@ -689,14 +689,14 @@ void RobustPlanAnalyser::calculatePNERobustness(double & robustnessOfPlan,double
 string getPlanStepString(const plan_step * ps)
 {
     if(ps == 0) return "";
-		string act = "("+ps->op_sym->getName();
-		for(typed_symbol_list<const_symbol>::const_iterator j = ps->params->begin();
-			j != ps->params->end(); ++j)
-		{
-			act += " " + (*j)->getName();
-		};
-		act += ")";
-		if(ps->duration_given) act += " [" + toString(ps->duration) + "]";
+    string act = "("+ps->op_sym->getName();
+    for(typed_symbol_list<const_symbol>::const_iterator j = ps->params->begin();
+	j != ps->params->end(); ++j)
+    {
+	act += " " + (*j)->getName();
+    };
+    act += ")";
+    if(ps->duration_given) act += " [" + toString(ps->duration) + "]";
     if(LaTeX) latexString(act);
     return act;
 };
